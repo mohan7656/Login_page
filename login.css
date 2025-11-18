@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+section{
+    position: relative;
+    color: white;
+    width: 24%;
+    padding: 2em;
+    border-radius: 1em;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px gray solid;
+}
+
+section::before{
+    content:"";
+    position: absolute;
+    inset: 0;
+    background-image: url(./Img/logbg.jpg);
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    transform: scale(1.08);
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
+    z-index: -1;
+}
+
+section * {
+    position: relative;
+    z-index: 2;
+}
+
+#header{
+    text-align: center;
+    font-size: 30px;
+    margin-top: .5em;
+}
+
+label{
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+input{
+    margin-top: .5em;
+    width: 95%;
+    height: 4em;
+    border: 1px solid gray;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding-left: 4%;
+    margin-left: 1em;
+}
+
+button{
+    display: inline-block;
+    width: 90%;
+    height: 4em;
+    margin-top: 2.5em;
+    margin: 1.5em;
+    background: linear-gradient(to top left,black,gray);
+    border-radius: 2em;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    -ms-border-radius: 2em;
+    -o-border-radius: 2em;
+    color: white;
+    cursor: pointer;
+
+}
+
+section>div>p{
+    display: inline;
+    margin-left: 25%;
+}
+
+section>#form>a{
+    display: inline;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    left: 63%;
+}
+
+section>#footer>a{
+    display: inline-block;
+    justify-content: center;
+    color: white;
+}
+
+input:hover{
+    box-shadow: 3px 3px 15px red;
+}
+
+#header>h2{
+    color: rgb(170, 170, 170);
+}
+
+button:active{
+    background: linear-gradient(to bottom right,black,gray);
+}
+
+@media(max-width:575px){
+    main{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+section{
+    position: relative;
+    color: white;
+    width: 76%;
+    padding: 2em;
+    border-radius: 1em;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px gray solid;
+}
+}

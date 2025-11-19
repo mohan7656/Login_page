@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body{
+    overflow: scroll;
 }
 
 main{
@@ -21,6 +26,10 @@ section{
     overflow: hidden;
     z-index: 1;
     border: 1px gray solid;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
 }
 
 section::before{
@@ -62,12 +71,12 @@ input{
     height: 4em;
     border: 1px solid gray;
     border-radius: 10px;
+    padding-left: 4%;
+    margin-left: 1em;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    padding-left: 4%;
-    margin-left: 1em;
 }
 
 button{
@@ -84,29 +93,28 @@ button{
     -o-border-radius: 2em;
     color: white;
     cursor: pointer;
-
 }
 
 section>div>p{
-    display: inline;
-    margin-left: 25%;
+    display: inline-block;
+    left: 20%;
 }
 
 section>#form>a{
-    display: inline;
-    text-decoration: none;
+    display: flex;
     color: white;
-    position: relative;
-    left: 63%;
+    /* position: relative; */
+    margin-top: 1em;
+    justify-content: end;
 }
 
-section>#footer>a{
+section>#footer>p>a{
     display: inline-block;
     justify-content: center;
     color: white;
 }
 
-input:hover{
+input:focus{
     box-shadow: 3px 3px 15px red;
 }
 
@@ -118,6 +126,17 @@ button:active{
     background: linear-gradient(to bottom right,black,gray);
 }
 
+button,a{
+    outline: none;
+}
+
+button:active{
+    outline: none;
+    box-shadow: none;
+}
+
+
+
 @media(max-width:575px){
     main{
     display: flex;
@@ -126,15 +145,37 @@ button:active{
     align-items: center;
     background-color: black;
 }
-
 section{
     position: relative;
     color: white;
     width: 76%;
-    padding: 2em;
+    padding: 1em;
     border-radius: 1em;
     overflow: hidden;
     z-index: 1;
     border: 1px gray solid;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
 }
+
+input{
+    margin-top: .3em;
+    width: 92%;
+    height: 2.5em;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-left: 4%;
+    margin-left: 1em;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+button{
+    height: 3em;
+}
+
 }

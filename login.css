@@ -103,7 +103,6 @@ section>div>p{
 section>#form>a{
     display: flex;
     color: white;
-    /* position: relative; */
     margin-top: 1em;
     justify-content: end;
 }
@@ -133,6 +132,14 @@ button,a{
 button:active{
     outline: none;
     box-shadow: none;
+}
+
+#footer a:active{
+    color: rgb(55, 55, 204);
+}
+
+#form a:active{
+    color: rgb(55, 55, 204);
 }
 
 
